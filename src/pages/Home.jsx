@@ -726,6 +726,25 @@ function Home() {
   </div>
 </section>
 
+<footer className="bg-white text-black py-8">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="flex flex-col md:flex-row justify-between items-center">
+            <div className="mb-4 md:mb-0">
+              <img src="https://s3.ap-northeast-3.amazonaws.com/testunity1.0/logo2.png" alt="Company Logo" className="h-40" />
+            </div>
+            <div className="flex space-x-4">
+              <a href="#services" className="hover:text-[#4CAF50]">サービス</a>
+              <a href="#news" className="hover:text-[#4CAF50]">ニュース</a>
+              <a href="#contact" className="hover:text-[#4CAF50]">会社概要</a>
+              <button onClick={toggleContactForm} className="hover:text-[#4CAF50]">お問い合わせ</button>
+            </div>
+          </div>
+          <div className="text-center mt-4">
+            <p className="text-sm">&copy; 2024 First AI All rights reserved.</p>
+          </div>
+        </div>
+      </footer>
+
 {selectedCase && (
   <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
     <div className="bg-white rounded-lg shadow-lg max-w-4xl w-full max-h-[90vh] overflow-y-auto">
@@ -755,25 +774,6 @@ function Home() {
           </div>
         </div>
       )}
-
-<footer className="bg-white text-black py-8">
-        <div className="max-w-6xl mx-auto px-4">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="mb-4 md:mb-0">
-              <img src="https://s3.ap-northeast-3.amazonaws.com/testunity1.0/logo2.png" alt="Company Logo" className="h-40" />
-            </div>
-            <div className="flex space-x-4">
-              <a href="#services" className="hover:text-[#4CAF50]">サービス</a>
-              <a href="#news" className="hover:text-[#4CAF50]">ニュース</a>
-              <a href="#contact" className="hover:text-[#4CAF50]">会社概要</a>
-              <a href="#contact" className="hover:text-[#4CAF50]">お問い合わせ</a>
-            </div>
-          </div>
-          <div className="text-center mt-4">
-            <p className="text-sm">&copy; 2024 First AI All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
 <style jsx global>{`
         @keyframes fadeInLeft {
           from { opacity: 0; transform: translateX(-20px); }
