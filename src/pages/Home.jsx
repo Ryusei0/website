@@ -774,7 +774,7 @@ function Home() {
           </div>
         </div>
       )}
-<style jsx global>{`
+<style>{`
         @keyframes fadeInLeft {
           from { opacity: 0; transform: translateX(-20px); }
           to { opacity: 1; transform: translateX(0); }
