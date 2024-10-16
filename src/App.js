@@ -7,6 +7,8 @@ import Services from './pages/Services';
 import Cases from './pages/Cases';
 import Recruit from './pages/Recruit';
 import Contact from './pages/Contact';
+import Terms from './pages/Terms';
+import Privacy from './pages/Privacy';
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -37,6 +39,8 @@ function App() {
               <Route path="/cases" element={<Cases />} />
               <Route path="/recruit" element={<Recruit />} />
               <Route path="/contact" element={<Contact />} />
+              <Route path="/terms" element={<Terms />} />
+              <Route path="/privacy" element={<Privacy />} />
             </Routes>
           </div>
         </main>

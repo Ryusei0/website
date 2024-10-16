@@ -23,8 +23,12 @@ function Footer() {
             <Link to="/contact" className="hover:text-gray-600">お問い合わせ</Link>
           </div>
         </div>
-        <div className="text-center mt-4">
+        <div className="mt-4 flex flex-col md:flex-row justify-between items-center">
           <p className="text-sm">&copy; 2024 First AI All rights reserved.</p>
+          <div className="flex space-x-4 mt-2 md:mt-0">
+            <Link to="/terms" className="text-sm hover:text-gray-600">利用規約</Link>
+            <Link to="/privacy" className="text-sm hover:text-gray-600">プライバシーポリシー</Link>
+          </div>
         </div>
       </div>
     </footer>
