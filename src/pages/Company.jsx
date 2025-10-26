@@ -275,14 +275,9 @@ const Company = () => {
             name="山内 悠真"
             title="取締役 COO"
             imageSrc="https://s3.ap-northeast-3.amazonaws.com/testunity1.0/website/%E5%B1%B1%E5%86%85.JPG"
-            bio="京都大学 工学部在籍中。株式会社KOKUA 新規事業リーダー。大学時代に教育、就活支援、SNS広告事業で起業し、幅広い事業開発経験を持つ。事業立ち上げから外部との連携に至るまで、実務全般を担当。多様な分野での実績を活かし、事業の成長を牽引中。"
+            bio="京都大学 工学部卒業。株式会社KOKUA 新規事業リーダー。大学時代に教育、就活支援、SNS広告事業で起業し、幅広い事業開発経験を持つ。事業立ち上げから外部との連携に至るまで、実務全般を担当。多様な分野での実績を活かし、事業の成長を牽引中。"
           />
-          <ExecutiveProfile
-            name="中村 慧"
-            title="CSO"
-            imageSrc="https://s3.ap-northeast-3.amazonaws.com/testunity1.0/website/%E4%B8%AD%E6%9D%91.JPG"
-            bio="カリフォルニア大学 サンディエゴ校 (UCSD) 国際社会学部在籍中。7年間にわたりアメリカに留学（ニューヨーク3年、カリフォルニア4年）。中小企業への技能実習生受け入れ支援の経験を持ち、総務全般および顧客課題のリサーチを担当。国際的な視野を活かし、企業の課題解決に貢献している。"
-          />
+       
           <ExecutiveProfile
             name="堀越 諒太"
             title="事業開発"
