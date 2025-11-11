@@ -41,7 +41,7 @@ function Header() {
         <div className="flex justify-between items-center h-24">
           <Link to="/" className="flex-shrink-0">
             <img 
-              src="https://s3.ap-northeast-3.amazonaws.com/testunity1.0/website/logo4.png" 
+              src="https://s3.ap-northeast-3.amazonaws.com/testunity1.0/website/logo4+(1).jpg" 
               alt="Company Logo" 
               className="h-20"
             />
