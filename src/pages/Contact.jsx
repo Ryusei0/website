@@ -1,135 +1,81 @@
-import React, { useState } from 'react';
-
-const InputField = ({ label, type, placeholder, required, value, onChange, name }) => (
-  <div className="mb-8">
-    <label className="block text-sm font-medium text-gray-700 mb-2">
-      {label} {required && <span className="text-red-500">*</span>}
-    </label>
-    <input
-      type={type}
-      placeholder={placeholder}
-      required={required}
-      value={value}
-      onChange={onChange}
-      name={name}
-      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-    />
-  </div>
-);
+import React from "react";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    company: '',
-    name: '',
-    phone: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log('Form submitted:', formData);
-    // Here you would typically send the data to a server
-  };
-
   return (
-    <div className="max-w-3xl mx-auto py-24 px-6 font-sans">
-         <div className="w-full">
-          <div className="relative w-full h-64 md:h-96 overflow-hidden">
-            <div
-              className="absolute inset-0 bg-fixed bg-center bg-cover"
-              style={{
-                backgroundImage:
-                  'url("https://s3.ap-northeast-3.amazonaws.com/testunity1.0/website/image_fx_+(2).jpg")',
-              }}
-            ></div>
-            {/* 斜めのオーバーレイを追加 */}
-            <div className="absolute inset-0 bg-black opacity-50 transform -skew-y-6 origin-top-left"></div>
-            {/* テキストを前面に表示 */}
-            <div className="relative z-10 p-6 h-full flex flex-col justify-center">
-              <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
-                <p className="text-sm mb-1 opacity-80 text-white">お問い合わせ</p>
-                <h1 className="text-4xl md:text-5xl font-bold tracking-wide text-white">
+    <div className="max-w-5xl mx-auto py-24 px-6 font-sans">
+      {/* Hero */}
+      <div className="w-full">
+        <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-2xl shadow-sm">
+          <div
+            className="absolute inset-0 bg-fixed bg-center bg-cover"
+            style={{
+              backgroundImage:
+                'url("https://s3.ap-northeast-3.amazonaws.com/testunity1.0/website/image_fx_+(2).jpg")',
+            }}
+          />
+          <div className="absolute inset-0 bg-black/55" />
+          <div className="relative z-10 p-6 h-full flex flex-col justify-center">
+            <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+              <p className="text-sm mb-1 opacity-80 text-white">お問い合わせ</p>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-wide text-white">
                 Contact
-                </h1>
-              </div>
+              </h1>
             </div>
           </div>
         </div>
-      <div className="bg-white p-12">
-        <h1 className="text-4xl font-bold mb-8 text-center text-gray-800">
-          お問い合わせ
-        </h1>
-        <div className="w-24 h-1 bg-gray-500 mx-auto mb-12"></div>
-        <p className="text-lg mb-12 text-center text-gray-600">
-          弊社サービスに関するお問い合わせは、<br/>下記フォームをご入力の上、送信してください。
-          <br />
-          <span className="text-red-500 font-medium">*</span> は必須項目です。
+      </div>
+
+      {/* Body */}
+      <div className="bg-white/80 backdrop-blur-sm p-8 md:p-12 mt-8 rounded-2xl shadow-xl border border-gray-100">
+        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900">
+          お問い合わせのお願い
+        </h2>
+        <div className="w-24 h-1 bg-gray-600/70 mx-auto mt-4 mb-10 rounded" />
+
+        <p className="text-lg md:text-xl text-center text-gray-700 leading-relaxed">
+          大変お手数をおかけしますが、下記の電話番号までご連絡いただけますと幸いです。
         </p>
-        <form onSubmit={handleSubmit} className="space-y-8">
-          <InputField
-            label="会社名"
-            type="text"
-            placeholder="会社名を入力してください"
-            required={true}
-            value={formData.company}
-            onChange={handleChange}
-            name="company"
-          />
-          <InputField
-            label="氏名"
-            type="text"
-            placeholder="氏名を入力してください"
-            required={true}
-            value={formData.name}
-            onChange={handleChange}
-            name="name"
-          />
-          <InputField
-            label="電話番号"
-            type="tel"
-            placeholder="電話番号を入力してください"
-            required={true}
-            value={formData.phone}
-            onChange={handleChange}
-            name="phone"
-          />
-          <InputField
-            label="メールアドレス"
-            type="email"
-            placeholder="メールアドレスを入力してください"
-            required={true}
-            value={formData.email}
-            onChange={handleChange}
-            name="email"
-          />
-          <div className="mb-8">
-            <label className="block text-sm font-medium text-gray-700 mb-2">
-              お問い合わせ内容 <span className="text-red-500">*</span>
-            </label>
-            <textarea
-              placeholder="お問い合わせ内容を入力してください"
-              required
-              value={formData.message}
-              onChange={handleChange}
-              name="message"
-              rows="6"
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 transition duration-300"
-            ></textarea>
+
+        <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch">
+          {/* Spacer for balance on desktop */}
+          <div className="hidden md:block" />
+
+          {/* Center Card */}
+          <div className="col-span-1">
+            <div className="h-full rounded-2xl border border-gray-200 shadow-sm p-6 md:p-8 flex flex-col items-center text-center bg-white">
+              <div className="text-sm tracking-wide text-gray-500">代表取締役</div>
+              <div className="mt-1 text-2xl font-semibold text-gray-900">灘波 竜星</div>
+
+              <div className="mt-6 w-full border-t border-dashed border-gray-200" />
+
+              <div className="mt-6">
+                <div className="text-sm text-gray-500">お電話</div>
+                <a
+                  href="tel:08057063397"
+                  className="block mt-2 text-2xl md:text-3xl font-bold tracking-wide text-gray-900"
+                >
+                  080-5706-3397
+                </a>
+              </div>
+
+              <a
+                href="tel:08057063397"
+                aria-label="電話をかける"
+                className="mt-8 inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-semibold bg-gray-800 text-white shadow hover:shadow-md hover:bg-gray-900 transition"
+              >
+                電話する
+              </a>
+            </div>
           </div>
-          <div className="text-center">
-            <button
-              type="submit"
-              className="bg-gray-600 text-white px-8 py-3 rounded-full text-lg font-semibold hover:bg-blue-700 transition-colors duration-300 shadow-lg hover:shadow-xl"
-            >
-              送信する
-            </button>
-          </div>
-        </form>
+
+          {/* Spacer for balance on desktop */}
+          <div className="hidden md:block" />
+        </div>
+
+        {/* Optional footer note */}
+        <p className="mt-10 text-center text-sm text-gray-500">
+          ※ 営業時間外の場合は折り返しご連絡いたします。
+        </p>
       </div>
     </div>
   );
