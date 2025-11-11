@@ -29,30 +29,36 @@ const Contact = () => {
         <div className="w-24 h-1 bg-gray-600/70 mx-auto mb-10 rounded" />
 
         <p className="text-lg md:text-xl text-gray-700 leading-relaxed mb-10">
-          大変お手数をおかけしますが、下記の電話番号までご連絡いただけますと幸いです。
+          大変お手数をおかけしますが、下記の電話番号またはメールアドレスまでご連絡いただけますと幸いです。
         </p>
 
         <div>
           <div className="text-sm tracking-wide text-gray-500">代表取締役</div>
           <div className="mt-1 text-2xl font-semibold text-gray-900">灘波 竜星</div>
 
-          <div className="mt-6">
-            <div className="text-sm text-gray-500">お電話</div>
-            <a
-              href="tel:08057063397"
-              className="block mt-2 text-2xl md:text-3xl font-bold tracking-wide text-gray-900"
-            >
-              080-5706-3397
-            </a>
-          </div>
+          <div className="mt-8 grid grid-cols-1 gap-8 place-items-center">
+            {/* Phone */}
+            <div>
+              <div className="text-sm text-gray-500">お電話</div>
+              <a
+                href="tel:08057063397"
+                className="block mt-2 text-2xl md:text-3xl font-bold tracking-wide text-gray-900"
+              >
+                080-5706-3397
+              </a>
+            </div>
 
-          <a
-            href="tel:08057063397"
-            aria-label="電話をかける"
-            className="mt-8 inline-flex items-center justify-center rounded-full px-8 py-3 text-base font-semibold bg-gray-800 text-white shadow hover:shadow-md hover:bg-gray-900 transition"
-          >
-            電話する
-          </a>
+            {/* Email */}
+            <div>
+              <div className="text-sm text-gray-500">メール</div>
+              <a
+                href="mailto:ryusei.namba@firstai-3d.com"
+                className="block mt-2 text-xl md:text-2xl font-semibold tracking-wide text-gray-900 break-all"
+              >
+                ryusei.namba@firstai-3d.com
+              </a>
+            </div>
+          </div>
         </div>
 
         <p className="mt-10 text-sm text-gray-500">
@@ -64,3 +70,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
